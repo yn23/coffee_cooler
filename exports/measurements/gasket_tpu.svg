@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600.00 420.00" font-family="Inter, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#2b2b2b"/></marker>
+<pattern id="grid10" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#edf2f6" stroke-width="0.6"/></pattern>
+<pattern id="grid50" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#grid10)"/><path d="M 50 0 L 0 0 0 50" fill="none" stroke="#dbe3ea" stroke-width="0.8"/></pattern>
+</defs>
+<rect x="0" y="0" width="600.00" height="420.00" fill="#fbfcfd"/>
+<rect x="0" y="0" width="600.00" height="420.00" fill="url(#grid50)"/>
+<text x="24" y="34" font-size="22" fill="#1f2933" font-weight="700">gasket_tpu</text>
+<rect x="400.00" y="24.00" width="180.00" height="76.00" stroke="#94a3b8" stroke-width="1.00" fill="#ffffffcc"/>
+<text x="410.00" y="50.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">外径 156.40 mm</text>
+<text x="410.00" y="70.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">内径 149.00 mm</text>
+<text x="410.00" y="90.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">厚み 1.20 mm</text>
+<line x1="199.00" y1="205.00" x2="211.00" y2="205.00" stroke="#7c8794" stroke-width="0.90"/>
+<line x1="205.00" y1="199.00" x2="205.00" y2="211.00" stroke="#7c8794" stroke-width="0.90"/>
+<circle cx="205.00" cy="205.00" r="78.20" stroke="#c56b19" stroke-width="2.20" fill="none"/>
+<circle cx="205.00" cy="205.00" r="74.50" stroke="#c56b19" stroke-width="2.20" fill="none"/>
+<line x1="126.80" y1="283.20" x2="126.80" y2="325.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="283.20" y1="283.20" x2="283.20" y2="325.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="126.80" y1="325.00" x2="283.20" y2="325.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="205.00" y="319.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400">Ø156.40</text>
+<line x1="130.50" y1="130.50" x2="130.50" y2="90.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="279.50" y1="130.50" x2="279.50" y2="90.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="130.50" y1="90.00" x2="279.50" y2="90.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="205.00" y="84.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400">Ø149.00</text>
+<line x1="390.00" y1="204.40" x2="430.00" y2="204.40" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="390.00" y1="205.60" x2="430.00" y2="205.60" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="430.00" y1="204.40" x2="430.00" y2="205.60" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="424.00" y="205.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400" transform="rotate(-90.00 424.00 205.00)">1.20</text>
+</svg>

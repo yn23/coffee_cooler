@@ -1,0 +1,16 @@
+# Build artifacts
+stl/*.stl
+exports/measurements/*.svg
+exports/images/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env

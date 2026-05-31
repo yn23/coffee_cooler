@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="540" viewBox="0 0 760.00 540.00" font-family="Inter, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#2b2b2b"/></marker>
+<pattern id="grid10" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#edf2f6" stroke-width="0.6"/></pattern>
+<pattern id="grid50" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#grid10)"/><path d="M 50 0 L 0 0 0 50" fill="none" stroke="#dbe3ea" stroke-width="0.8"/></pattern>
+</defs>
+<rect x="0" y="0" width="760.00" height="540.00" fill="#fbfcfd"/>
+<rect x="0" y="0" width="760.00" height="540.00" fill="url(#grid50)"/>
+<text x="24" y="34" font-size="22" fill="#1f2933" font-weight="700">base</text>
+<rect x="560.00" y="24.00" width="180.00" height="116.00" stroke="#94a3b8" stroke-width="1.00" fill="#ffffffcc"/>
+<text x="570.00" y="50.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">外径 165.00 mm</text>
+<text x="570.00" y="70.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">ファン開口 113.00 mm</text>
+<text x="570.00" y="90.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">穴ピッチ 105.00 mm</text>
+<text x="570.00" y="110.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">電装箱 32.00 × 80.00 mm</text>
+<text x="570.00" y="130.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">高さ 80.00 mm</text>
+<line x1="229.00" y1="245.00" x2="241.00" y2="245.00" stroke="#7c8794" stroke-width="0.90"/>
+<line x1="235.00" y1="239.00" x2="235.00" y2="251.00" stroke="#7c8794" stroke-width="0.90"/>
+<circle cx="235.00" cy="245.00" r="82.50" stroke="#c56b19" stroke-width="2.20" fill="none"/>
+<circle cx="235.00" cy="245.00" r="79.50" stroke="#c56b19" stroke-width="2.20" fill="none" stroke-dasharray="6 4"/>
+<circle cx="235.00" cy="245.00" r="56.50" stroke="#c56b19" stroke-width="2.20" fill="none"/>
+<circle cx="182.50" cy="192.50" r="2.25" stroke="#2b2b2b" stroke-width="1.00" fill="none"/>
+<circle cx="287.50" cy="192.50" r="2.25" stroke="#2b2b2b" stroke-width="1.00" fill="none"/>
+<circle cx="182.50" cy="297.50" r="2.25" stroke="#2b2b2b" stroke-width="1.00" fill="none"/>
+<circle cx="287.50" cy="297.50" r="2.25" stroke="#2b2b2b" stroke-width="1.00" fill="none"/>
+<rect x="298.50" y="205.00" width="32.00" height="80.00" stroke="#64748b" stroke-width="1.40" fill="none"/>
+<line x1="152.50" y1="327.50" x2="152.50" y2="415.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="317.50" y1="327.50" x2="317.50" y2="415.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="152.50" y1="415.00" x2="317.50" y2="415.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="235.00" y="409.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400">Ø165.00</text>
+<line x1="178.50" y1="188.50" x2="178.50" y2="90.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="291.50" y1="188.50" x2="291.50" y2="90.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="178.50" y1="90.00" x2="291.50" y2="90.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="235.00" y="84.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400">Ø113.00</text>
+<line x1="182.50" y1="192.50" x2="182.50" y2="120.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="287.50" y1="192.50" x2="287.50" y2="120.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="182.50" y1="120.00" x2="287.50" y2="120.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="235.00" y="114.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400">105.00</text>
+<line x1="540.00" y1="205.00" x2="580.00" y2="205.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="540.00" y1="285.00" x2="580.00" y2="285.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="580.00" y1="205.00" x2="580.00" y2="285.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="574.00" y="245.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400" transform="rotate(-90.00 574.00 245.00)">80.00</text>
+</svg>

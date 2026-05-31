@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="560" viewBox="0 0 620.00 560.00" font-family="Inter, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#2b2b2b"/></marker>
+<pattern id="grid10" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#edf2f6" stroke-width="0.6"/></pattern>
+<pattern id="grid50" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#grid10)"/><path d="M 50 0 L 0 0 0 50" fill="none" stroke="#dbe3ea" stroke-width="0.8"/></pattern>
+</defs>
+<rect x="0" y="0" width="620.00" height="560.00" fill="#fbfcfd"/>
+<rect x="0" y="0" width="620.00" height="560.00" fill="url(#grid50)"/>
+<text x="24" y="34" font-size="22" fill="#1f2933" font-weight="700">concept_assembly</text>
+<rect x="412.00" y="24.00" width="184.00" height="96.00" stroke="#94a3b8" stroke-width="1.00" fill="#ffffffcc"/>
+<text x="422.00" y="50.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">全高 149.00 mm</text>
+<text x="422.00" y="70.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">ベース 80.00 mm</text>
+<text x="422.00" y="90.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">プラナム 45.00 mm</text>
+<text x="422.00" y="110.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">トップリング 20.00 mm</text>
+<rect x="40.00" y="40.00" width="260.00" height="420.00" stroke="#cbd5e1" stroke-width="1.00" fill="#ffffff70"/>
+<rect x="40.00" y="40.00" width="260.00" height="420.00" stroke="#94a3b8" stroke-width="1.40" fill="none"/>
+<rect x="47.50" y="370.00" width="165.00" height="80.00" stroke="#c56b19" stroke-width="2.20" fill="none"/>
+<rect x="212.50" y="390.00" width="26.00" height="38.00" stroke="#64748b" stroke-width="1.60" fill="none"/>
+<rect x="47.50" y="323.00" width="165.00" height="45.00" stroke="#c56b19" stroke-width="2.20" fill="#fffaf3"/>
+<rect x="47.50" y="301.00" width="165.00" height="20.00" stroke="#c56b19" stroke-width="2.20" fill="#fffaf3"/>
+<line x1="305.00" y1="301.00" x2="340.00" y2="301.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="305.00" y1="450.00" x2="340.00" y2="450.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="340.00" y1="301.00" x2="340.00" y2="450.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="334.00" y="375.50" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400" transform="rotate(-90.00 334.00 375.50)">149.00</text>
+<line x1="55.00" y1="370.00" x2="68.00" y2="370.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="55.00" y1="450.00" x2="68.00" y2="450.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="68.00" y1="370.00" x2="68.00" y2="450.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="62.00" y="410.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400" transform="rotate(-90.00 62.00 410.00)">80.00</text>
+<line x1="79.00" y1="323.00" x2="92.00" y2="323.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="79.00" y1="368.00" x2="92.00" y2="368.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="92.00" y1="323.00" x2="92.00" y2="368.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="86.00" y="345.50" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400" transform="rotate(-90.00 86.00 345.50)">45.00</text>
+<line x1="103.00" y1="301.00" x2="116.00" y2="301.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="103.00" y1="321.00" x2="116.00" y2="321.00" stroke="#7a7a7a" stroke-width="0.80"/>
+<line x1="116.00" y1="301.00" x2="116.00" y2="321.00" stroke="#2b2b2b" stroke-width="1.0" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="110.00" y="311.00" font-size="14.00" text-anchor="middle" fill="#1f2933" font-weight="400" transform="rotate(-90.00 110.00 311.00)">20.00</text>
+<
+t
+e
+x
+t
+ 
+x
+=
+"
+5
+8
+.
+0
+0
+"
+ 
+y
+=
+"
+4
+9
+4
+.
+0
+0
+"
+ 
+f
+o
+n
+t
+-
+s
+i
+z
+e
+=
+"
+1
+4
+.
+0
+0
+"
+ 
+t
+e
+x
+t
+-
+a
+n
+c
+h
+o
+r
+=
+"
+s
+t
+a
+r
+t
+"
+ 
+f
+i
+l
+l
+=
+"
+#
+1
+f
+2
+9
+3
+3
+"
+ 
+f
+o
+n
+t
+-
+w
+e
+i
+g
+h
+t
+=
+"
+7
+0
+0
+"
+>
+側
+面
+模
+式
+図
+<
+/
+t
+e
+x
+t
+>
+<text x="58.00" y="520.00" font-size="12.00" text-anchor="start" fill="#475569" font-weight="400">概念図ではファン・ザル・電装部のモックを重ねる</text>
+</svg>

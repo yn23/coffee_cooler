@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640.00 420.00" font-family="Inter, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill="#2b2b2b"/></marker>
+<pattern id="grid10" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#edf2f6" stroke-width="0.6"/></pattern>
+<pattern id="grid50" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#grid10)"/><path d="M 50 0 L 0 0 0 50" fill="none" stroke="#dbe3ea" stroke-width="0.8"/></pattern>
+</defs>
+<rect x="0" y="0" width="640.00" height="420.00" fill="#fbfcfd"/>
+<rect x="0" y="0" width="640.00" height="420.00" fill="url(#grid50)"/>
+<text x="24" y="34" font-size="22" fill="#1f2933" font-weight="700">electronics_bay</text>
+<rect x="440.00" y="24.00" width="180.00" height="76.00" stroke="#94a3b8" stroke-width="1.00" fill="#ffffffcc"/>
+<text x="450.00" y="50.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">X 38.00 mm</text>
+<text x="450.00" y="70.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">Y 80.00 mm</text>
+<text x="450.00" y="90.00" font-size="13.00" text-anchor="start" fill="#1f2933" font-weight="400">Z 45.00 mm</text>
+<rect x="90.00" y="110.00" width="240.00" height="160.00" stroke="#c56b19" stroke-width="2.00" fill="none"/>
+<text x="210.00" y="300.00" font-size="18.00" text-anchor="middle" fill="#1f2933" font-weight="700">簡易投影図</text>
+</svg>
