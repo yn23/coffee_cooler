@@ -12,6 +12,9 @@ module top_ring() {
         translate([0, 0, top_ring_h - sieve_ring_seat_depth])
             cylinder(h = sieve_ring_seat_depth + 1, d = sieve_ring_seat_d);
 
+        // Shallow upper pocket for the sieve's attached metal outer ring.
+        translate([0, 0, 0])
+            cylinder(h = 5, d = sieve_ring_seat_d);
     }
 }
 

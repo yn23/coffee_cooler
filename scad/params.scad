@@ -8,31 +8,16 @@ wall = 3;           // Standard wall thickness / 標準の壁厚
 clearance = 0.4;    // General mechanical clearance / 嵌合や穴用の基本クリアランス
 
 // --- Main Body Sections / 本体の主要寸法 ---
-body_outer_d = 165;  // Outer diameter of the main cylindrical body / 本体円筒部の外径
-top_ring_h = 20;     // Height of the top ring that holds the sieve / ザル受け上部リングの高さ
-plenum_h = 45;       // Height of the air plenum section / ザル下の整流空間の高さ
+body_outer_d = 176;  // Outer diameter of the main cylindrical body / 本体円筒部の外径
+top_ring_h = 35;     // Height of the top ring that holds the sieve / ザル受け上部リングの高さ
 base_h = 80;         // Height of the base section (housing the fan) / ファンを収めるベース部の高さ
 
-// --- Sieve & Gasket (Top Section) / ザルとガスケット ---
+// --- Sieve (Top Section) / ザル受け ---
 // Parameters for the coffee sieve/filter / コーヒー用うらごしザルの寸法
 sieve_ring_outer_d = 156;                 // ザル付属金属リングの外径
-sieve_outer_d = sieve_ring_outer_d;       // mock表示用のザル外径。実寸基準はsieve_ring_outer_d
-sieve_h = 55;                             // ザル全体の高さ
 sieve_ring_seat_d = sieve_ring_outer_d + 0.8;  // top_ring側のザル受けポケット径
-sieve_ring_seat_depth = 10;               // ザル受けポケットの深さ
+sieve_ring_seat_depth = 20;               // ザル受けポケットの深さ
 sieve_opening_d = 148;                    // top_ring中央の吸気開口径
-sieve_loop_relief_w = 30;                 // 未使用: ザル横リング逃げの幅
-sieve_loop_relief_d = 7;                  // 未使用: ザル横リング逃げの奥行き
-sieve_loop_relief_h = 12;                 // 未使用: ザル横リング逃げの高さ
-sieve_seat_d = sieve_ring_seat_d;         // 互換用: ザル受け径
-sieve_lip_h = sieve_ring_seat_depth;      // 互換用: ザル受けリップ高さ
-
-// Gasket parameters (intended for TPU printing) / TPUガスケット寸法
-gasket_outer_d = sieve_ring_seat_d - 0.4;  // TPUガスケットの外径
-gasket_inner_d = sieve_opening_d + 1.0;    // TPUガスケットの内径
-gasket_h = 1.2;                            // TPUガスケットの厚み
-gasket_loop_relief_w = sieve_loop_relief_w + 2;  // 未使用: 旧切り欠き用の幅
-gasket_loop_relief_d = sieve_loop_relief_d + 1;  // 未使用: 旧切り欠き用の奥行き
 
 // --- Fan & Mount / 120mmファンと固定部 ---
 // Standard 120mm fan parameters / 一般的な120mm PCファン寸法

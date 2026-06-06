@@ -11,13 +11,14 @@ fi
 
 mkdir -p "$STL_DIR"
 
+echo "Building top_ring.stl..."
 openscad -o "$STL_DIR/top_ring.stl" "$SCAD_DIR/top_ring.scad"
-openscad -o "$STL_DIR/gasket_tpu.stl" "$SCAD_DIR/gasket.scad"
-openscad -o "$STL_DIR/plenum.stl" "$SCAD_DIR/plenum.scad"
-openscad -o "$STL_DIR/electronics_bay.stl" "$SCAD_DIR/electronics_bay.scad"
+
+echo "Building base.stl..."
 openscad -o "$STL_DIR/base.stl" "$SCAD_DIR/base.scad"
-openscad -o "$STL_DIR/coffee_cooler_assembly.stl" "$SCAD_DIR/coffee_cooler.scad"
-openscad -o "$STL_DIR/concept_assembly.stl" "$SCAD_DIR/concept_assembly.scad"
+
+echo "Building electronics_bay.stl..."
+openscad -o "$STL_DIR/electronics_bay.stl" "$SCAD_DIR/electronics_bay.scad"
 
 python3 "$ROOT_DIR/scripts/build_measurements.py" \
   --stl-dir "$STL_DIR" \

@@ -26,18 +26,9 @@ coffee_cooler/
 ├── measurements/
 │   └── sieve_15cm.md
 ├── scad/
-│   ├── coffee_cooler.scad
 │   ├── params.scad
 │   ├── top_ring.scad
-│   ├── gasket.scad
-│   ├── plenum.scad
-│   ├── base.scad
-│   ├── fan_mount.scad
-│   ├── vents.scad
-│   ├── electronics_mount.scad
-│   ├── mock_parts.scad
-│   ├── concept_assembly.scad
-│   └── print_split.scad
+│   └── base.scad
 ├── stl/
 │   └── .gitkeep
 ├── exports/
@@ -51,14 +42,10 @@ coffee_cooler/
 
 ## Design Direction
 
-本体は一体型ではなく、次の3分割を基本にします。
+本体は一体型ではなく、次の2分割を基本にします。
 
 - `top_ring`: 15cmうらごしを固定する上部リング
-- `gasket`: ザル付属リングとtop_ringの間に置くTPU製ガスケット
-- `plenum`: ザル直下の整流チャンバー
 - `base`: 120mmファン、側面排気、電装部を持つ下部筐体
-- `concept_assembly`: ザル、ファン、基板、PWMノブ類の仮形状を重ねた確認用モデル
-- `print_split`: 大径化や試験用の4分割出力モデル
 
 15cmザルと120mmファンの構成では、A1 miniで分割なし出力を基本にします。
 
@@ -70,7 +57,7 @@ coffee_cooler/
 | beyourchoi PWMコントローラ | ファン速度調整、電源ON/OFF |
 | DC電源ジャック ソケット 5.5mm x 2.1mm | 12V給電 |
 | 120mm PWMファン | 冷却ファン |
-| 3Dプリント本体 | 部品固定、整流、排気 |
+| 3Dプリント本体 | 部品固定、排気 |
 
 詳細は [specific.md](specific.md) と [docs/parts.md](docs/parts.md) を参照します。
 
@@ -80,10 +67,8 @@ coffee_cooler/
 2. [scad/params.scad](scad/params.scad) の寸法を調整する
 3. [scad/top_ring.scad](scad/top_ring.scad) でザル固定リングを試作する
 4. [scad/base.scad](scad/base.scad) でファン固定穴と排気口を検証する
-5. [scad/plenum.scad](scad/plenum.scad) で整流空間を調整する
-6. [scad/coffee_cooler.scad](scad/coffee_cooler.scad) で全体の干渉を確認する
-7. `scripts/build_stl.sh` でSTLを書き出す
-8. `scripts/build_measurements.py` でSTLごとの計測図SVGを書き出す
+5. `scripts/build_stl.sh` でSTLを書き出す
+6. `scripts/build_measurements.py` でSTLごとの計測図SVGを書き出す
 
 ## STL Export
 

@@ -280,55 +280,6 @@ def render_top_ring(params: Dict[str, float], title: str) -> List[str]:
     return sheet + svg_footer()
 
 
-def render_gasket(params: Dict[str, float], title: str) -> List[str]:
-    w, h = 600, 420
-    cx, cy = 205, 205
-    outer_r = params["gasket_outer_d"] / 2
-    inner_r = params["gasket_inner_d"] / 2
-    sheet = top_view_sheet(
-        title,
-        [
-            f"外径 {fmt_mm(params['gasket_outer_d'])} mm",
-            f"内径 {fmt_mm(params['gasket_inner_d'])} mm",
-            f"厚み {fmt_mm(params['gasket_h'])} mm",
-        ],
-        width=w,
-        height=h,
-    )
-    sheet += center_marks(cx, cy)
-    sheet += [circle(cx, cy, outer_r), circle(cx, cy, inner_r)]
-    sheet += dim_h(cx - outer_r, cx + outer_r, 325, f"Ø{fmt_mm(params['gasket_outer_d'])}", ext_top=cy + outer_r)
-    sheet += dim_h(cx - inner_r, cx + inner_r, 90, f"Ø{fmt_mm(params['gasket_inner_d'])}", ext_top=cy - inner_r)
-    sheet += dim_v(430, cy - params["gasket_h"] / 2, cy + params["gasket_h"] / 2, f"{fmt_mm(params['gasket_h'])}", ext_left=390, rotate=-90)
-    return sheet + svg_footer()
-
-
-def render_plenum(params: Dict[str, float], title: str) -> List[str]:
-    w, h = 700, 500
-    cx, cy = 230, 235
-    outer_r = params["body_outer_d"] / 2
-    inner_r = (params["body_outer_d"] - params["wall"] * 2) / 2
-    fan_r = params["fan_cutout_d"] / 2
-    sheet = top_view_sheet(
-        title,
-        [
-            f"外径 {fmt_mm(params['body_outer_d'])} mm",
-            f"内径 {fmt_mm(params['body_outer_d'] - params['wall'] * 2)} mm",
-            f"ファン開口 {fmt_mm(params['fan_cutout_d'])} mm",
-            f"高さ {fmt_mm(params['plenum_h'])} mm",
-        ],
-        width=w,
-        height=h,
-    )
-    sheet += center_marks(cx, cy)
-    sheet += [circle(cx, cy, outer_r), circle(cx, cy, inner_r, dash="6 4"), circle(cx, cy, fan_r)]
-    sheet += dim_h(cx - outer_r, cx + outer_r, 390, f"Ø{fmt_mm(params['body_outer_d'])}", ext_top=cy + outer_r)
-    sheet += dim_h(cx - inner_r, cx + inner_r, 120, f"Ø{fmt_mm(params['body_outer_d'] - params['wall'] * 2)}", ext_top=cy - inner_r)
-    sheet += dim_h(cx - fan_r, cx + fan_r, 80, f"Ø{fmt_mm(params['fan_cutout_d'])}", ext_top=cy - fan_r)
-    sheet += dim_v(545, cy - params["plenum_h"] / 2, cy + params["plenum_h"] / 2, f"{fmt_mm(params['plenum_h'])}", ext_left=505, rotate=-90)
-    return sheet + svg_footer()
-
-
 def fan_hole_positions(params: Dict[str, float]) -> List[Tuple[float, float]]:
     pitch = params["fan_hole_pitch"] / 2
     return [(-pitch, -pitch), (pitch, -pitch), (-pitch, pitch), (pitch, pitch)]
@@ -368,68 +319,18 @@ def render_base(params: Dict[str, float], title: str) -> List[str]:
     return sheet + svg_footer()
 
 
-def render_split_part(params: Dict[str, float], base_part: str, quadrant: str, title: str) -> List[str]:
-    w, h = 700, 500
-    cx, cy = 230, 235
-    outer_r = params["body_outer_d"] / 2
-    sheet = top_view_sheet(
-        title,
-        [
-            f"元部品 {base_part}",
-            f"象限 {quadrant.upper()}",
-            f"外径 {fmt_mm(params['body_outer_d'])} mm",
-            f"高さ {fmt_mm(params.get(base_part + '_h', params.get('base_h', 0.0)))} mm",
-        ],
-        width=w,
-        height=h,
-    )
-    sheet += [circle(cx, cy, outer_r, stroke="#d1d5db", width=1.4)]
-
-    if quadrant in {"ne", "nw"}:
-        sheet.append(line(cx - outer_r - 10, cy, cx + outer_r, cy, stroke="#c56b19", width=2.2))
-    else:
-        sheet.append(line(cx - outer_r - 10, cy, cx + outer_r, cy, stroke="#c56b19", width=2.2))
-    if quadrant in {"ne", "se"}:
-        sheet.append(line(cx, cy - outer_r - 10, cx, cy + outer_r, stroke="#c56b19", width=2.2))
-    else:
-        sheet.append(line(cx, cy - outer_r - 10, cx, cy + outer_r, stroke="#c56b19", width=2.2))
-
-    if base_part == "base":
-        fan_r = params["fan_cutout_d"] / 2
-        sheet.append(circle(cx, cy, fan_r, stroke="#c56b19", width=1.8))
-    elif base_part == "plenum":
-        sheet.append(circle(cx, cy, (params["body_outer_d"] - params["wall"] * 2) / 2, stroke="#c56b19", width=1.8, dash="6 4"))
-    elif base_part == "top_ring":
-        sheet.append(circle(cx, cy, params["sieve_opening_d"] / 2, stroke="#c56b19", width=1.8))
-        sheet.append(circle(cx, cy, params["sieve_ring_seat_d"] / 2, stroke="#c56b19", width=1.3, dash="6 4"))
-
-    if quadrant == "ne":
-        label_pos = (cx + 95, cy - 95)
-    elif quadrant == "nw":
-        label_pos = (cx - 95, cy - 95)
-    elif quadrant == "sw":
-        label_pos = (cx - 95, cy + 95)
-    else:
-        label_pos = (cx + 95, cy + 95)
-    sheet.append(text(label_pos[0], label_pos[1], quadrant.upper(), size=18, weight="700"))
-    sheet.append(text(430, 435, "4分割出力の1片を表すシート", size=13, anchor="start", fill="#475569"))
-    return sheet + svg_footer()
-
-
 def render_assembly(params: Dict[str, float], title: str, include_mock: bool = False) -> List[str]:
     w, h = 620, 560
     x0, y0 = 130, 450
     body_w = params["body_outer_d"]
     base_h = params["base_h"]
-    plenum_h = params["plenum_h"]
     top_ring_h = params["top_ring_h"]
     gap = 2.0
 
     sheet = svg_header(w, h, title)
     sheet += note_box(412, 24, [
-        f"全高 {fmt_mm(base_h + gap + plenum_h + gap + top_ring_h)} mm",
+        f"全高 {fmt_mm(base_h + gap + top_ring_h)} mm",
         f"ベース {fmt_mm(base_h)} mm",
-        f"プラナム {fmt_mm(plenum_h)} mm",
         f"トップリング {fmt_mm(top_ring_h)} mm",
     ], w=184)
 
@@ -437,21 +338,17 @@ def render_assembly(params: Dict[str, float], title: str, include_mock: bool = F
     sheet.append(rect(40, 40, 260, 420, stroke="#94a3b8", width=1.4, fill="none"))
 
     base_top = y0 - base_h
-    plenum_top = base_top - gap - plenum_h
-    ring_top = plenum_top - gap - top_ring_h
+    ring_top = base_top - gap - top_ring_h
 
     # Base block
     sheet.append(rect(x0 - body_w / 2, base_top, body_w, base_h, stroke="#c56b19", width=2.2))
     sheet.append(rect(x0 + body_w / 2, base_top + 20, 26, 38, stroke="#64748b", width=1.6))
-    # Plenum
-    sheet.append(rect(x0 - body_w / 2, plenum_top, body_w, plenum_h, stroke="#c56b19", width=2.2, fill="#fffaf3"))
     # Top ring
     sheet.append(rect(x0 - body_w / 2, ring_top, body_w, top_ring_h, stroke="#c56b19", width=2.2, fill="#fffaf3"))
 
-    sheet += dim_v(340, ring_top, y0, f"{fmt_mm(base_h + gap + plenum_h + gap + top_ring_h)}", ext_left=305, rotate=-90)
+    sheet += dim_v(340, ring_top, y0, f"{fmt_mm(base_h + gap + top_ring_h)}", ext_left=305, rotate=-90)
     sheet += dim_v(68, base_top, y0, f"{fmt_mm(base_h)}", ext_left=55, rotate=-90)
-    sheet += dim_v(92, plenum_top, base_top - gap, f"{fmt_mm(plenum_h)}", ext_left=79, rotate=-90)
-    sheet += dim_v(116, ring_top, plenum_top - gap, f"{fmt_mm(top_ring_h)}", ext_left=103, rotate=-90)
+    sheet += dim_v(116, ring_top, base_top - gap, f"{fmt_mm(top_ring_h)}", ext_left=103, rotate=-90)
     sheet += text(58, 494, "側面模式図", size=14, anchor="start", weight="700")
 
     if include_mock:
@@ -482,21 +379,12 @@ def render_sheet(path: Path, params: Dict[str, float]) -> List[str]:
     stem = path.stem
     if stem == "top_ring":
         return render_top_ring(params, stem)
-    if stem == "gasket_tpu":
-        return render_gasket(params, stem)
-    if stem == "plenum":
-        return render_plenum(params, stem)
     if stem == "base":
         return render_base(params, stem)
     if stem == "coffee_cooler_assembly":
         return render_assembly(params, stem, include_mock=False)
     if stem == "concept_assembly":
         return render_assembly(params, stem, include_mock=True)
-    if path.parent.name == "split":
-        match = re.match(r"^(top_ring|plenum|base)_(ne|nw|se|sw)$", stem)
-        if match:
-            base_part, quadrant = match.groups()
-            return render_split_part(params, base_part, quadrant, stem)
     return render_generic(path, params)
 
 
