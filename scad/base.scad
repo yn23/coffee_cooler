@@ -21,18 +21,23 @@ module fan_cutout(h = 10) {
     cylinder(h = h, d = fan_cutout_d, center = true);
 }
 
-// --- 側面排気スリット関連 (旧 vents.scad) ---
+// --- 側面排気丸穴関連 (旧 vents.scad) ---
 
-// ベース側面に熱風を逃がすための排気用横スリット群を生成するモジュール
+// ベース側面に熱風を逃がすための排気用丸穴群を生成するモジュール
 module side_vents(radius = body_outer_d / 2, center_z = vent_center_z) {
     for (i = [0 : vent_count - 1]) {
-        // 円周方向にスリットを回転配置
+        // 円周方向に各列を回転配置
         rotate([0, 0, i * 360 / vent_count])
             translate([radius, 0, center_z])
                 for (row = [0 : vent_rows - 1]) {
-                    // 各列に複数段のスリットを配置
+                    // 各列に複数段の丸穴グループを配置
                     translate([0, 0, (row - (vent_rows - 1) / 2) * vent_row_pitch])
-                        cube([wall * 4, vent_slot_w, vent_slot_h], center = true);
+                        // 各段に3つの丸穴を水平方向に並べる（ピッチ13mm）
+                        for (y_offset = [-13, 0, 13]) {
+                            translate([0, y_offset, 0])
+                                rotate([0, 90, 0])
+                                    cylinder(h = wall * 4, d = vent_hole_d, center = true, $fn=24);
+                        }
                 }
     }
 }

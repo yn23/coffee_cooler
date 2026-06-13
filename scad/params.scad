@@ -31,14 +31,13 @@ fan_plate_thickness = 4;     // ファン取付プレートの厚み
 fan_seal_lip_h = 2;          // ファン開口まわりのシールリップ高さ
 fan_seal_lip_w = 7;          // ファン開口まわりのシールリップ幅
 
-// --- Ventilation Slots / 側面排気スリット ---
-// Air exhaust slots on the base / ベース側面の排気口寸法
-vent_slot_w = 34;       // 排気スリットの横幅
-vent_slot_h = 9;        // 排気スリットの高さ
-vent_row_pitch = vent_slot_h + 6;  // 排気スリットの段間ピッチ
-vent_rows = 4;          // 排気スリットの段数
-vent_count = 8;         // 円周方向の排気スリット数
-vent_center_z = base_h / 2;  // 排気スリット群の中心高さ
+// --- Ventilation Holes / 側面排気丸穴 ---
+// Air exhaust holes on the base / ベース側面の排気穴寸法
+vent_hole_d = 10;       // Diameter of circular exhaust holes / 排気丸穴の直径
+vent_row_pitch = vent_hole_d + 8;  // Row pitch of exhaust holes / 排気丸穴の段間ピッチ
+vent_rows = 4;          // Number of rows / 排気丸穴の段数
+vent_count = 8;         // Number of columns around circumference / 円周方向の排気列数
+vent_center_z = base_h / 2;  // Center height of exhaust holes / 排気丸穴群の中心高さ
 
 // --- Electronics Bay / 電装室 ---
 // Internal space for PWM controller and DC barrel jack. / PWMコントローラとDC電源ジャックの収納部
